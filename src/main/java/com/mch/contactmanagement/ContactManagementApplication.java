@@ -14,7 +14,7 @@ public class ContactManagementApplication {
 		SpringApplication.run(ContactManagementApplication.class, args);
 	}
 
-/*	@Bean
+	@Bean
 	CommandLineRunner commandLineRunner(ContactService contactService){
 		return args -> {
 			contactService.saveContact(Contact.builder().firstName("Chebbi").lastName("Marwane").address("66 rue du tir").city("Maisons Laffitte").postalCode("78600").build());
@@ -22,6 +22,6 @@ public class ContactManagementApplication {
 			contactService.saveContact(Contact.builder().firstName("Test").lastName("testPrenom").address("avenue du général de gaulle").city("Sartrouville").postalCode("78200").build());
 			contactService.saveContact(Contact.builder().firstName("first").lastName("Last").address("66 rue du chat").city("Maisons Laffitte").postalCode("78500").mail("test@test.fr").build());
 		};
-	}*/
+	}
 
 }

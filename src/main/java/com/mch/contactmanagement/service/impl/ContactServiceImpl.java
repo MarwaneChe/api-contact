@@ -46,4 +46,10 @@ public class ContactServiceImpl implements ContactService {
             return Boolean.FALSE;
         }
     }
+
+    @Override
+    public Contact findContactById(Long idContact) {
+        Optional<Contact> contact = contactRepository.findById(idContact);
+        return contact.orElse(null);
+    }
 }

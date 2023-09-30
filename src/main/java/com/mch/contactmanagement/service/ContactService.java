@@ -9,5 +9,6 @@ public interface ContactService {
     Contact saveContact(Contact contact);
     Contact updateContact(Contact contact);
     Boolean deleteContact(Long idContact);
+    Contact findContactById(Long idContact);
 
 }
