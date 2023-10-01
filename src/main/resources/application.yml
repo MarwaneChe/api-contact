@@ -26,3 +26,10 @@ application-description: |
   * Contact creation
   * Contact update
   * Deletion of contact
+
+jwt:
+  private:
+    key: T9A7mseDfw45U32UC2tS23Vz4e9B3tiR7xh2ZcujQATVbaz8FS39hQ545J3dx7TQ
+
+url:
+  frontend: http://localhost:4200

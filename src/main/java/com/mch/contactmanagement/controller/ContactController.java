@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
@@ -52,6 +53,7 @@ public class ContactController {
 
     @DeleteMapping(value = "/{idContact}")
     @Operation(description = "Delete a contact in the database", summary = "Delete contact")
+    @PreAuthorize("hasAuthority('SCOPE_ADMIN')")
     public ResponseEntity<Boolean> deleteContact(@PathVariable("idContact") Long id) {
         Boolean result = contactService.deleteContact(id);
         if (Boolean.TRUE.equals(result)) {
